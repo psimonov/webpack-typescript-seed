@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   context: `${__dirname}/src`,
   entry: {
-    app: './app.js',
+    app: './index',
   },
   output: {
     path: `${__dirname}/build`,
@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -24,14 +24,14 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
     new CopyWebpackPlugin([{
-      from: './assets',
+      from: './public',
     }]),
     new CleanWebpackPlugin(),
   ],

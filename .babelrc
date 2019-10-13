@@ -1,11 +1,11 @@
 {
   "presets": [
-    "@babel/preset-env"
+    "@babel/env",
+    "@babel/typescript"
   ],
   "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-export-namespace-from",
-    "@babel/plugin-proposal-throw-expressions"
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
   ]
 }
